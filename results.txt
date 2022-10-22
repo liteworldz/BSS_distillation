@@ -1,0 +1,30 @@
+Paper: Knowledge Distillation with Adversarial Samples Supporting Decision Boundary
+Original Experiment Run
+
+
+Distillation from ResNet 26 (teacher) to ResNet 10 (student) on CIFAR-10 dataset.
+Pre-trained teacher network (ResNet 26) is included.
+
+Train    Time Taken: 5.69 sec
+Loss: 0.839 | Acc: 90.790% (45395/50000)
+Test     Time Taken: 0.95 sec
+Loss: 0.505 | Acc: 87.230% (8723/10000)
+
+
+Distillation from ResNet 26 (teacher) to SAME ResNet 26 (student) on CIFAR-10 dataset.
+
+Stage 1 Epoch: 80
+Train    Time Taken: 7.80 sec
+Loss: 0.469 | Acc: 97.886% (48943/50000)
+Test     Time Taken: 1.01 sec
+Loss: 0.400 | Acc: 91.010% (9101/10000)
+
+Stage 1 Epoch: 80
+Train    Time Taken: 8.38 sec
+Loss: 2.741 | Acc: 93.326% (46663/50000)
+Test     Time Taken: 1.08 sec
+Loss: 0.376 | Acc: 89.440% (8944/10000)
+
+
+
+

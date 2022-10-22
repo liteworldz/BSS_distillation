@@ -1,0 +1,288 @@
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,24.10,13.064,23.888,BSS,64,1,ResNet26,ResNet8
+1,Test,1,0.98,1.699,35.540,BSS,64,1,ResNet26,ResNet8
+1,Train,2,17.72,9.887,40.684,BSS,64,1,ResNet26,ResNet8
+1,Test,2,0.96,1.554,42.010,BSS,64,1,ResNet26,ResNet8
+1,Train,3,19.98,7.773,53.422,BSS,64,1,ResNet26,ResNet8
+1,Test,3,0.99,1.312,51.930,BSS,64,1,ResNet26,ResNet8
+1,Train,4,20.51,6.096,60.576,BSS,64,1,ResNet26,ResNet8
+1,Test,4,1.09,1.079,61.730,BSS,64,1,ResNet26,ResNet8
+1,Train,5,21.67,4.612,67.234,BSS,64,1,ResNet26,ResNet8
+1,Test,5,1.07,0.909,66.980,BSS,64,1,ResNet26,ResNet8
+1,Train,6,21.12,3.679,68.252,BSS,64,1,ResNet26,ResNet8
+1,Test,6,1.06,0.901,67.470,BSS,64,1,ResNet26,ResNet8
+1,Train,7,20.54,2.789,69.026,BSS,64,1,ResNet26,ResNet8
+1,Test,7,1.01,0.898,67.420,BSS,64,1,ResNet26,ResNet8
+1,Train,8,5.94,2.203,69.808,BSS,64,1,ResNet26,ResNet8
+1,Test,8,0.98,0.866,69.060,BSS,64,1,ResNet26,ResNet8
+1,Train,9,5.79,1.918,70.378,BSS,64,1,ResNet26,ResNet8
+1,Test,9,0.97,0.847,69.710,BSS,64,1,ResNet26,ResNet8
+1,Train,10,5.96,1.636,70.858,BSS,64,1,ResNet26,ResNet8
+1,Test,10,1.05,0.837,70.030,BSS,64,1,ResNet26,ResNet8
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,22.68,12.102,35.430,BSS,64,3,ResNet26,ResNet8
+1,Test,1,1.10,2.119,41.970,BSS,64,3,ResNet26,ResNet8
+1,Train,2,21.44,9.247,54.616,BSS,64,3,ResNet26,ResNet8
+1,Test,2,0.91,1.717,52.720,BSS,64,3,ResNet26,ResNet8
+1,Train,3,21.16,7.482,62.292,BSS,64,3,ResNet26,ResNet8
+1,Test,3,1.00,1.513,59.210,BSS,64,3,ResNet26,ResNet8
+1,Train,4,18.69,6.047,67.188,BSS,64,3,ResNet26,ResNet8
+1,Test,4,1.02,1.416,64.230,BSS,64,3,ResNet26,ResNet8
+1,Train,5,19.90,4.694,72.274,BSS,64,3,ResNet26,ResNet8
+1,Test,5,0.98,1.003,71.350,BSS,64,3,ResNet26,ResNet8
+1,Train,6,19.16,3.762,73.408,BSS,64,3,ResNet26,ResNet8
+1,Test,6,1.01,0.982,72.390,BSS,64,3,ResNet26,ResNet8
+1,Train,7,20.57,2.892,73.992,BSS,64,3,ResNet26,ResNet8
+1,Test,7,1.01,0.980,72.620,BSS,64,3,ResNet26,ResNet8
+1,Train,8,5.48,2.312,74.484,BSS,64,3,ResNet26,ResNet8
+1,Test,8,1.01,0.915,73.910,BSS,64,3,ResNet26,ResNet8
+1,Train,9,5.58,1.998,75.276,BSS,64,3,ResNet26,ResNet8
+1,Test,9,0.98,0.879,74.440,BSS,64,3,ResNet26,ResNet8
+1,Train,10,5.64,1.685,75.642,BSS,64,3,ResNet26,ResNet8
+1,Test,10,0.99,0.857,74.420,BSS,64,3,ResNet26,ResNet8
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,22.88,13.412,37.104,BSS,64,7,ResNet26,ResNet8
+1,Test,1,1.04,1.719,45.470,BSS,64,7,ResNet26,ResNet8
+1,Train,2,20.59,11.340,53.698,BSS,64,7,ResNet26,ResNet8
+1,Test,2,0.96,1.719,52.940,BSS,64,7,ResNet26,ResNet8
+1,Train,3,21.07,9.676,62.948,BSS,64,7,ResNet26,ResNet8
+1,Test,3,1.09,1.804,55.700,BSS,64,7,ResNet26,ResNet8
+1,Train,4,20.19,8.269,67.048,BSS,64,7,ResNet26,ResNet8
+1,Test,4,0.92,1.549,61.080,BSS,64,7,ResNet26,ResNet8
+1,Train,5,20.56,6.837,72.242,BSS,64,7,ResNet26,ResNet8
+1,Test,5,1.02,0.939,71.600,BSS,64,7,ResNet26,ResNet8
+1,Train,6,20.92,5.652,73.304,BSS,64,7,ResNet26,ResNet8
+1,Test,6,1.10,0.962,71.380,BSS,64,7,ResNet26,ResNet8
+1,Train,7,20.66,4.502,74.054,BSS,64,7,ResNet26,ResNet8
+1,Test,7,1.07,0.912,72.600,BSS,64,7,ResNet26,ResNet8
+1,Train,8,5.51,3.649,74.530,BSS,64,7,ResNet26,ResNet8
+1,Test,8,0.92,0.846,74.100,BSS,64,7,ResNet26,ResNet8
+1,Train,9,6.30,3.092,75.032,BSS,64,7,ResNet26,ResNet8
+1,Test,9,1.01,0.823,74.670,BSS,64,7,ResNet26,ResNet8
+1,Train,10,5.37,2.532,75.292,BSS,64,7,ResNet26,ResNet8
+1,Test,10,1.06,0.819,74.360,BSS,64,7,ResNet26,ResNet8
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,26.40,14.234,17.260,BSS,64,1,ResNet26,ResNet14
+1,Test,1,1.12,1.970,24.850,BSS,64,1,ResNet26,ResNet14
+1,Train,2,23.16,11.129,27.550,BSS,64,1,ResNet26,ResNet14
+1,Test,2,0.99,1.702,33.790,BSS,64,1,ResNet26,ResNet14
+1,Train,3,23.07,9.087,38.754,BSS,64,1,ResNet26,ResNet14
+1,Test,3,1.01,1.624,36.380,BSS,64,1,ResNet26,ResNet14
+1,Train,4,22.75,7.269,49.102,BSS,64,1,ResNet26,ResNet14
+1,Test,4,1.07,1.896,42.360,BSS,64,1,ResNet26,ResNet14
+1,Train,5,23.33,5.431,58.994,BSS,64,1,ResNet26,ResNet14
+1,Test,5,1.12,1.086,60.760,BSS,64,1,ResNet26,ResNet14
+1,Train,6,23.22,4.367,60.732,BSS,64,1,ResNet26,ResNet14
+1,Test,6,1.03,1.053,62.180,BSS,64,1,ResNet26,ResNet14
+1,Train,7,18.76,3.359,61.968,BSS,64,1,ResNet26,ResNet14
+1,Test,7,1.07,1.047,62.880,BSS,64,1,ResNet26,ResNet14
+1,Train,8,5.71,2.669,63.010,BSS,64,1,ResNet26,ResNet14
+1,Test,8,0.99,1.041,63.030,BSS,64,1,ResNet26,ResNet14
+1,Train,9,5.66,2.297,64.004,BSS,64,1,ResNet26,ResNet14
+1,Test,9,1.05,0.996,64.760,BSS,64,1,ResNet26,ResNet14
+1,Train,10,5.83,1.954,65.098,BSS,64,1,ResNet26,ResNet14
+1,Test,10,1.03,0.990,64.730,BSS,64,1,ResNet26,ResNet14
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,23.95,11.886,37.668,BSS,64,3,ResNet26,ResNet14
+1,Test,1,1.09,2.077,44.670,BSS,64,3,ResNet26,ResNet14
+1,Train,2,22.24,8.879,57.758,BSS,64,3,ResNet26,ResNet14
+1,Test,2,0.97,2.160,53.180,BSS,64,3,ResNet26,ResNet14
+1,Train,3,22.59,6.897,67.242,BSS,64,3,ResNet26,ResNet14
+1,Test,3,0.97,1.113,68.720,BSS,64,3,ResNet26,ResNet14
+1,Train,4,23.41,5.351,73.604,BSS,64,3,ResNet26,ResNet14
+1,Test,4,1.24,1.029,72.880,BSS,64,3,ResNet26,ResNet14
+1,Train,5,22.12,3.978,79.332,BSS,64,3,ResNet26,ResNet14
+1,Test,5,1.05,0.774,79.380,BSS,64,3,ResNet26,ResNet14
+1,Train,6,22.74,3.097,80.610,BSS,64,3,ResNet26,ResNet14
+1,Test,6,1.00,0.774,80.290,BSS,64,3,ResNet26,ResNet14
+1,Train,7,22.14,2.317,81.140,BSS,64,3,ResNet26,ResNet14
+1,Test,7,1.01,0.764,80.370,BSS,64,3,ResNet26,ResNet14
+1,Train,8,5.72,1.819,81.724,BSS,64,3,ResNet26,ResNet14
+1,Test,8,1.01,0.708,81.400,BSS,64,3,ResNet26,ResNet14
+1,Train,9,5.57,1.560,82.210,BSS,64,3,ResNet26,ResNet14
+1,Test,9,1.17,0.682,81.710,BSS,64,3,ResNet26,ResNet14
+1,Train,10,5.97,1.311,82.538,BSS,64,3,ResNet26,ResNet14
+1,Test,10,0.97,0.662,81.900,BSS,64,3,ResNet26,ResNet14
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,24.84,13.319,38.794,BSS,64,7,ResNet26,ResNet14
+1,Test,1,1.01,1.721,48.200,BSS,64,7,ResNet26,ResNet14
+1,Train,2,21.63,11.094,58.354,BSS,64,7,ResNet26,ResNet14
+1,Test,2,0.99,1.612,58.210,BSS,64,7,ResNet26,ResNet14
+1,Train,3,19.82,9.413,66.946,BSS,64,7,ResNet26,ResNet14
+1,Test,3,1.16,2.051,58.570,BSS,64,7,ResNet26,ResNet14
+1,Train,4,22.79,7.957,72.166,BSS,64,7,ResNet26,ResNet14
+1,Test,4,1.07,1.505,65.690,BSS,64,7,ResNet26,ResNet14
+1,Train,5,18.75,6.486,78.218,BSS,64,7,ResNet26,ResNet14
+1,Test,5,1.07,0.801,78.640,BSS,64,7,ResNet26,ResNet14
+1,Train,6,22.67,5.312,79.410,BSS,64,7,ResNet26,ResNet14
+1,Test,6,1.18,0.807,78.720,BSS,64,7,ResNet26,ResNet14
+1,Train,7,22.25,4.174,80.276,BSS,64,7,ResNet26,ResNet14
+1,Test,7,1.02,0.765,79.290,BSS,64,7,ResNet26,ResNet14
+1,Train,8,5.75,3.352,80.662,BSS,64,7,ResNet26,ResNet14
+1,Test,8,1.12,0.715,79.540,BSS,64,7,ResNet26,ResNet14
+1,Train,9,6.00,2.812,81.352,BSS,64,7,ResNet26,ResNet14
+1,Test,9,1.03,0.681,80.000,BSS,64,7,ResNet26,ResNet14
+1,Train,10,5.69,2.283,81.458,BSS,64,7,ResNet26,ResNet14
+1,Test,10,0.99,0.652,80.550,BSS,64,7,ResNet26,ResNet14
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,24.92,15.540,10.602,BSS,64,1,ResNet26,ResNet20
+1,Test,1,1.08,2.291,12.530,BSS,64,1,ResNet26,ResNet20
+1,Train,2,26.77,12.423,17.368,BSS,64,1,ResNet26,ResNet20
+1,Test,2,1.02,1.943,23.910,BSS,64,1,ResNet26,ResNet20
+1,Train,3,25.25,10.284,25.622,BSS,64,1,ResNet26,ResNet20
+1,Test,3,1.06,1.801,30.270,BSS,64,1,ResNet26,ResNet20
+1,Train,4,21.92,8.569,32.052,BSS,64,1,ResNet26,ResNet20
+1,Test,4,0.98,1.676,35.080,BSS,64,1,ResNet26,ResNet20
+1,Train,5,25.72,6.980,39.566,BSS,64,1,ResNet26,ResNet20
+1,Test,5,1.07,1.547,42.200,BSS,64,1,ResNet26,ResNet20
+1,Train,6,25.57,5.826,41.646,BSS,64,1,ResNet26,ResNet20
+1,Test,6,0.97,1.503,43.430,BSS,64,1,ResNet26,ResNet20
+1,Train,7,25.26,4.664,43.678,BSS,64,1,ResNet26,ResNet20
+1,Test,7,1.03,1.436,46.560,BSS,64,1,ResNet26,ResNet20
+1,Train,8,6.92,3.787,46.012,BSS,64,1,ResNet26,ResNet20
+1,Test,8,1.07,1.518,44.070,BSS,64,1,ResNet26,ResNet20
+1,Train,9,6.93,3.252,47.526,BSS,64,1,ResNet26,ResNet20
+1,Test,9,1.00,1.382,49.040,BSS,64,1,ResNet26,ResNet20
+1,Train,10,6.90,2.746,49.698,BSS,64,1,ResNet26,ResNet20
+1,Test,10,1.09,1.504,45.940,BSS,64,1,ResNet26,ResNet20
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,26.95,12.047,35.576,BSS,64,3,ResNet26,ResNet20
+1,Test,1,1.00,1.868,43.530,BSS,64,3,ResNet26,ResNet20
+1,Train,2,25.00,9.100,55.506,BSS,64,3,ResNet26,ResNet20
+1,Test,2,1.02,2.395,50.910,BSS,64,3,ResNet26,ResNet20
+1,Train,3,24.87,6.972,66.368,BSS,64,3,ResNet26,ResNet20
+1,Test,3,0.97,1.796,59.520,BSS,64,3,ResNet26,ResNet20
+1,Train,4,24.96,5.347,73.372,BSS,64,3,ResNet26,ResNet20
+1,Test,4,1.01,1.137,71.330,BSS,64,3,ResNet26,ResNet20
+1,Train,5,25.08,3.880,80.106,BSS,64,3,ResNet26,ResNet20
+1,Test,5,1.07,0.751,79.810,BSS,64,3,ResNet26,ResNet20
+1,Train,6,24.49,3.027,81.346,BSS,64,3,ResNet26,ResNet20
+1,Test,6,1.12,0.733,80.630,BSS,64,3,ResNet26,ResNet20
+1,Train,7,25.48,2.245,82.096,BSS,64,3,ResNet26,ResNet20
+1,Test,7,1.00,0.742,80.920,BSS,64,3,ResNet26,ResNet20
+1,Train,8,6.92,1.740,82.650,BSS,64,3,ResNet26,ResNet20
+1,Test,8,0.92,0.689,81.660,BSS,64,3,ResNet26,ResNet20
+1,Train,9,7.01,1.496,83.136,BSS,64,3,ResNet26,ResNet20
+1,Test,9,0.94,0.668,81.620,BSS,64,3,ResNet26,ResNet20
+1,Train,10,6.87,1.253,83.558,BSS,64,3,ResNet26,ResNet20
+1,Test,10,1.02,0.636,81.990,BSS,64,3,ResNet26,ResNet20
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,26.56,13.329,38.370,BSS,64,7,ResNet26,ResNet20
+1,Test,1,0.98,1.850,48.640,BSS,64,7,ResNet26,ResNet20
+1,Train,2,24.47,11.012,59.390,BSS,64,7,ResNet26,ResNet20
+1,Test,2,1.05,1.162,64.930,BSS,64,7,ResNet26,ResNet20
+1,Train,3,25.47,9.309,68.342,BSS,64,7,ResNet26,ResNet20
+1,Test,3,1.02,1.753,62.820,BSS,64,7,ResNet26,ResNet20
+1,Train,4,25.59,7.880,73.380,BSS,64,7,ResNet26,ResNet20
+1,Test,4,1.08,1.400,67.960,BSS,64,7,ResNet26,ResNet20
+1,Train,5,25.91,6.403,79.414,BSS,64,7,ResNet26,ResNet20
+1,Test,5,1.08,0.814,79.110,BSS,64,7,ResNet26,ResNet20
+1,Train,6,23.44,5.225,80.868,BSS,64,7,ResNet26,ResNet20
+1,Test,6,1.12,0.786,79.900,BSS,64,7,ResNet26,ResNet20
+1,Train,7,24.38,4.107,81.240,BSS,64,7,ResNet26,ResNet20
+1,Test,7,1.02,0.770,80.580,BSS,64,7,ResNet26,ResNet20
+1,Train,8,6.89,3.283,81.796,BSS,64,7,ResNet26,ResNet20
+1,Test,8,1.08,0.698,80.890,BSS,64,7,ResNet26,ResNet20
+1,Train,9,6.90,2.749,82.452,BSS,64,7,ResNet26,ResNet20
+1,Test,9,1.12,0.659,81.580,BSS,64,7,ResNet26,ResNet20
+1,Train,10,6.97,2.220,82.694,BSS,64,7,ResNet26,ResNet20
+1,Test,10,0.97,0.651,81.580,BSS,64,7,ResNet26,ResNet20
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,26.83,15.859,9.982,BSS,64,1,ResNet26,ResNet26
+1,Test,1,1.01,2.334,10.030,BSS,64,1,ResNet26,ResNet26
+1,Train,2,25.97,13.493,9.830,BSS,64,1,ResNet26,ResNet26
+1,Test,2,1.11,2.322,10.030,BSS,64,1,ResNet26,ResNet26
+1,Train,3,25.72,12.190,10.214,BSS,64,1,ResNet26,ResNet26
+1,Test,3,1.04,2.333,10.110,BSS,64,1,ResNet26,ResNet26
+1,Train,4,26.38,10.848,11.138,BSS,64,1,ResNet26,ResNet26
+1,Test,4,1.04,2.288,11.580,BSS,64,1,ResNet26,ResNet26
+1,Train,5,27.31,9.456,12.932,BSS,64,1,ResNet26,ResNet26
+1,Test,5,1.04,2.278,12.950,BSS,64,1,ResNet26,ResNet26
+1,Train,6,27.96,8.139,13.366,BSS,64,1,ResNet26,ResNet26
+1,Test,6,1.07,2.253,13.420,BSS,64,1,ResNet26,ResNet26
+1,Train,7,27.02,6.821,13.344,BSS,64,1,ResNet26,ResNet26
+1,Test,7,1.02,2.237,14.570,BSS,64,1,ResNet26,ResNet26
+1,Train,8,8.29,5.782,15.402,BSS,64,1,ResNet26,ResNet26
+1,Test,8,1.00,2.187,16.440,BSS,64,1,ResNet26,ResNet26
+1,Train,9,8.20,5.002,16.652,BSS,64,1,ResNet26,ResNet26
+1,Test,9,0.98,2.128,18.270,BSS,64,1,ResNet26,ResNet26
+1,Train,10,8.26,4.235,18.322,BSS,64,1,ResNet26,ResNet26
+1,Test,10,1.03,2.066,19.450,BSS,64,1,ResNet26,ResNet26
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,29.30,12.870,28.694,BSS,64,3,ResNet26,ResNet26
+1,Test,1,1.09,1.822,38.930,BSS,64,3,ResNet26,ResNet26
+1,Train,2,24.07,9.738,49.182,BSS,64,3,ResNet26,ResNet26
+1,Test,2,1.14,1.582,52.230,BSS,64,3,ResNet26,ResNet26
+1,Train,3,26.52,7.498,61.766,BSS,64,3,ResNet26,ResNet26
+1,Test,3,1.15,1.673,59.400,BSS,64,3,ResNet26,ResNet26
+1,Train,4,27.15,5.743,70.502,BSS,64,3,ResNet26,ResNet26
+1,Test,4,0.95,1.343,68.680,BSS,64,3,ResNet26,ResNet26
+1,Train,5,24.41,4.172,77.704,BSS,64,3,ResNet26,ResNet26
+1,Test,5,1.04,0.809,78.400,BSS,64,3,ResNet26,ResNet26
+1,Train,6,26.31,3.241,79.310,BSS,64,3,ResNet26,ResNet26
+1,Test,6,1.03,0.785,79.410,BSS,64,3,ResNet26,ResNet26
+1,Train,7,26.35,2.421,80.090,BSS,64,3,ResNet26,ResNet26
+1,Test,7,1.07,0.779,79.970,BSS,64,3,ResNet26,ResNet26
+1,Train,8,8.02,1.877,80.692,BSS,64,3,ResNet26,ResNet26
+1,Test,8,1.06,0.737,80.510,BSS,64,3,ResNet26,ResNet26
+1,Train,9,8.14,1.605,81.390,BSS,64,3,ResNet26,ResNet26
+1,Test,9,1.06,0.707,81.070,BSS,64,3,ResNet26,ResNet26
+1,Train,10,8.07,1.341,81.976,BSS,64,3,ResNet26,ResNet26
+1,Test,10,1.14,0.698,80.860,BSS,64,3,ResNet26,ResNet26
+Files already downloaded and verified
+Files already downloaded and verified
+CUDA Available
+Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net
+1,Train,1,27.36,13.695,31.888,BSS,64,7,ResNet26,ResNet26
+1,Test,1,1.10,1.813,41.140,BSS,64,7,ResNet26,ResNet26
+1,Train,2,26.43,11.497,50.906,BSS,64,7,ResNet26,ResNet26
+1,Test,2,1.04,1.707,52.670,BSS,64,7,ResNet26,ResNet26
+1,Train,3,24.32,9.688,62.510,BSS,64,7,ResNet26,ResNet26
+1,Test,3,1.00,1.706,61.720,BSS,64,7,ResNet26,ResNet26
+1,Train,4,25.93,8.071,70.670,BSS,64,7,ResNet26,ResNet26
+1,Test,4,1.00,1.048,72.680,BSS,64,7,ResNet26,ResNet26
+1,Train,5,27.24,6.513,77.580,BSS,64,7,ResNet26,ResNet26
+1,Test,5,1.00,0.781,78.880,BSS,64,7,ResNet26,ResNet26
+1,Train,6,25.99,5.312,79.400,BSS,64,7,ResNet26,ResNet26
+1,Test,6,0.97,0.788,79.500,BSS,64,7,ResNet26,ResNet26
+1,Train,7,26.69,4.172,80.110,BSS,64,7,ResNet26,ResNet26
+1,Test,7,1.00,0.760,79.880,BSS,64,7,ResNet26,ResNet26
+1,Train,8,8.07,3.339,80.812,BSS,64,7,ResNet26,ResNet26
+1,Test,8,1.02,0.731,80.340,BSS,64,7,ResNet26,ResNet26
+1,Train,9,8.19,2.791,81.586,BSS,64,7,ResNet26,ResNet26
+1,Test,9,1.05,0.671,80.670,BSS,64,7,ResNet26,ResNet26
+1,Train,10,8.19,2.256,81.724,BSS,64,7,ResNet26,ResNet26
+1,Test,10,1.00,0.626,81.430,BSS,64,7,ResNet26,ResNet26
