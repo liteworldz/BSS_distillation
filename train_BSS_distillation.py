@@ -157,6 +157,7 @@ def test(use_cuda, compress, attack_id, temperature, attack_size, t_net_id, s_ne
 def main(params): 
     # Parameters
     dataset_name = params.dataset
+    teacher_model = params.teacher_model
     t_net_id = params.t_net_id
     s_net_id = params.s_net_id
     save_dir = params.save_dir
@@ -199,7 +200,7 @@ def main(params):
 
     if t_net_id == 'ResNet26':
         # Teacher network
-        teacher = BN_version_fix(torch.load('./results/Res26_C10/320_epoch.t7', map_location=lambda storage, loc: storage.cuda(0))['net'])
+        teacher = BN_version_fix(torch.load(teacher_model, map_location=lambda storage, loc: storage.cuda(0))['net'])
         t_net = ResNet26()
         t_net.load_state_dict(teacher.state_dict())
     else :
@@ -262,9 +263,10 @@ def main(params):
 if __name__ == '__main__':
     parser = ArgumentParser(description='Main entry point') 
     parser.add_argument("--dataset", type=str, default='CIFAR-10') 
+    parser.add_argument("--teacher_model", type=str, default='./results/Res26_C10/320_epoch.t7')
     parser.add_argument("--t_net_id", type=str, default='ResNet26')
     parser.add_argument("--s_net_id", type=str, default='ResNet20') 
-    parser.add_argument("--save_dir", type=str, default='results/BSS_distillation_80epoch_res8_C10')
+    parser.add_argument("--save_dir", type=str, default='results/BSS_distillation_saved')
     parser.add_argument("--gpu", type=int, default=1) 
     parser.add_argument("--temp", type=int, default=3)
     parser.add_argument("--attack_id", type=str, default='BSS')
