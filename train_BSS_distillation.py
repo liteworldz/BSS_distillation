@@ -51,12 +51,13 @@ def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id
         print("out_s ", out_s.shape)
          ([256, 10])
         '''''
-        a = out_t.detach().cpu().numpy()
+        
         ## Determine Total variance in the space 
         
         # KD loss
         
         if compress:
+            a = out_t.detach().cpu().numpy()
             ua,sa,vha=np.linalg.svd(a.T,full_matrices=False)
             loss += - ratio * (F.softmax(torch.tensor(vha.T).cuda(), 1).detach() * F.log_softmax(out_s/temperature, 1)).sum() / batch_size1
         else:    
@@ -99,12 +100,11 @@ def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id
                 attack_out_t = t_net(attacked_inputs)
                 attack_out_s = s_net(attacked_inputs)
 
-                b = attack_out_t.detach().cpu().numpy()
-                ## Determine Total variance in the space 
                 
-                
+                ## Determine Total variance in the space                 
                 # KD loss for Boundary Supporting Samples (BSS)
                 if compress:
+                    b = attack_out_t.detach().cpu().numpy()
                     ua,sa,vha=np.linalg.svd(b.T,full_matrices=False)
                     loss += - ratio_attack * (F.softmax(torch.tensor(vha.T).cuda() , 1).detach() * F.log_softmax(attack_out_s / temperature, 1)).sum() / batch_size2
                 else:
@@ -140,7 +140,7 @@ def test(use_cuda, compress, attack_id, temperature, attack_size, t_net_id, s_ne
         correct += predicted.eq(targets.data).cpu().float().sum()
         b_idx= batch_idx
 
-    print('1,Train,%d,%.2f,%.3f,%.3f,%s,%d,%d,%s,%s,%d' %  (int(epoch), time.time() - epoch_start_time,test_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(compress)))
+    print('1,Test,%d,%.2f,%.3f,%.3f,%s,%d,%d,%s,%s,%d' %  (int(epoch), time.time() - epoch_start_time,test_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(compress)))
 
     if save:
         # Save checkpoint.
@@ -221,9 +221,9 @@ def main(params):
         print('no student net was used')
 
     if use_cuda:
-        print('CUDA Available')
-        #torch.cuda.set_device(gpu_num)
-        torch.cuda.set_device("cuda:" + str(gpu_num))
+        #print('CUDA Available')
+        torch.cuda.set_device(gpu_num)
+        #torch.cuda.set_device("cuda:" + str(gpu_num))
         t_net.cuda()
         s_net.cuda()
         cudnn.benchmark = True
