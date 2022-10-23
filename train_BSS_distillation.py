@@ -1,9 +1,11 @@
 '''Train CIFAR10 with PyTorch.'''
 from __future__ import print_function
 from argparse import ArgumentParser
+from ast import If
 
 
 import os
+from symbol import if_stmt
 import time
 
 import numpy as np
@@ -22,7 +24,7 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES']='0,1,2'
 
 # Training
-def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id, attack, trainloader, criterion_CE, temperature, attack_size, t_net, s_net, ratio, ratio_attack, epoch):
+def train_attack_KD(use_cuda, heat, optimizer, attack_id, t_net_id, s_net_id, attack, trainloader, criterion_CE, temperature, attack_size, t_net, s_net, ratio, ratio_attack, epoch):
     epoch_start_time = time.time()
     
     s_net.train()
@@ -56,10 +58,16 @@ def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id
         
         # KD loss
         
-        if compress:
-            a = out_t.detach().cpu().numpy()
-            ua,sa,vha=np.linalg.svd(a.T,full_matrices=False)
-            loss += - ratio * (F.softmax(torch.tensor(vha.T).cuda(), 1).detach() * F.log_softmax(out_s/temperature, 1)).sum() / batch_size1
+        #loss += - ratio * (F.softmax(torch.tensor(vha.T).cuda(), 1).detach() * F.log_softmax(torch.tensor(vha.T).cuda() + out_s, 1)).sum() / batch_size1
+    
+        # define a method to measure cosine similarity in dim 1
+        cos = torch.nn.CosineSimilarity(dim=1)
+        similarity = cos(out_t, out_s)
+        HEAT = torch.mean(similarity).detach().cpu().numpy()
+                
+        if heat:
+            temperature = np.floor(np.abs((1- HEAT)*10))
+            loss += - ratio * (F.softmax(out_t/temperature, 1).detach() * F.log_softmax(out_s/temperature, 1)).sum() / batch_size1
         else:    
             loss += - ratio * (F.softmax(out_t/temperature, 1).detach() * F.log_softmax(out_s/temperature, 1)).sum() / batch_size1
         
@@ -100,13 +108,15 @@ def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id
                 attack_out_t = t_net(attacked_inputs)
                 attack_out_s = s_net(attacked_inputs)
 
+                cos = torch.nn.CosineSimilarity(dim=1)
+                similarity = cos(attack_out_t, attack_out_s)
+                HEAT = torch.mean(similarity).detach().cpu().numpy() 
                 
                 ## Determine Total variance in the space                 
                 # KD loss for Boundary Supporting Samples (BSS)
-                if compress:
-                    b = attack_out_t.detach().cpu().numpy()
-                    ua,sa,vha=np.linalg.svd(b.T,full_matrices=False)
-                    loss += - ratio_attack * (F.softmax(torch.tensor(vha.T).cuda() , 1).detach() * F.log_softmax(attack_out_s / temperature, 1)).sum() / batch_size2
+                if heat:
+                    temperature = np.floor(np.abs((1- HEAT)*10))
+                    loss += - ratio_attack * (F.softmax(attack_out_t / temperature, 1).detach() * F.log_softmax(attack_out_s / temperature, 1)).sum() / batch_size2
                 else:
                     loss += - ratio_attack * (F.softmax(attack_out_t / temperature, 1).detach() * F.log_softmax(attack_out_s / temperature, 1)).sum() / batch_size2
         loss.backward()
@@ -118,10 +128,10 @@ def train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id
         correct += predicted.eq(targets.data).cpu().float().sum()
         b_idx = batch_idx
     
-    print('1,Train,%d,%.2f,%.3f,%.3f,%s,%d,%d,%s,%s,%d' %  (int(epoch), time.time() - epoch_start_time,train_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(compress)))
+    print('1, Train, %d, %.2f, %.3f, %.3f, %s, %d, %d, %s, %s, %d' %  (int(epoch), time.time() - epoch_start_time,train_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(heat)))
  
 
-def test(use_cuda, compress, attack_id, temperature, attack_size, t_net_id, s_net_id, testloader, criterion_CE, save_dir, net, epoch, save=False):
+def test(use_cuda, heat, attack_id, temperature, attack_size, t_net_id, s_net_id, testloader, criterion_CE, save_dir, net, epoch, save=False):
     epoch_start_time = time.time()
     net.eval()
     test_loss = 0
@@ -140,7 +150,7 @@ def test(use_cuda, compress, attack_id, temperature, attack_size, t_net_id, s_ne
         correct += predicted.eq(targets.data).cpu().float().sum()
         b_idx= batch_idx
 
-    print('1,Test,%d,%.2f,%.3f,%.3f,%s,%d,%d,%s,%s,%d' %  (int(epoch), time.time() - epoch_start_time,test_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(compress)))
+    print('1, Test, %d, %.2f, %.3f, %.3f, %s, %d, %d, %s, %s, %d' %  (int(epoch), time.time() - epoch_start_time,test_loss / (b_idx + 1), 100. * correct / total, attack_id, attack_size, temperature,t_net_id,s_net_id, int(heat)))
 
     if save:
         # Save checkpoint.
@@ -166,7 +176,7 @@ def main(params):
     attack_size = params.attack_size
     attack_id = params.attack_id
     max_epoch = params.max_epoch
-    compress = params.compress
+    heat = params.heat
     global optimizer
 
     if not os.path.isdir(save_dir):
@@ -237,7 +247,7 @@ def main(params):
 
     criterion_MSE = nn.MSELoss(size_average=False)
     criterion_CE = nn.CrossEntropyLoss()
-    print('Stage,Method,Epoch,Time,Loss,Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net, Compressed')  # prepare header for csv file results
+    print('Stage, Method, Epoch, Time, Loss, Acc, Attack, Attack_Size, Temprature, Teacher_Net, Student_Net, heated')  # prepare header for csv file results
     for epoch in range(1, max_epoch+1):
         if epoch == 1:
             optimizer = optim.SGD(s_net.parameters(), lr=0.1, momentum=0.9, weight_decay=1e-4)
@@ -249,9 +259,9 @@ def main(params):
         ratio = max(3 * (1 - epoch / max_epoch), 0) + 1
         attack_ratio = max(2 * (1 - 4 / 3 * epoch / max_epoch), 0) + 0
 
-        train_attack_KD(use_cuda, compress, optimizer, attack_id, t_net_id, s_net_id, attack, trainloader, criterion_CE, temperature, attack_size, t_net, s_net, ratio, attack_ratio, epoch)
+        train_attack_KD(use_cuda, heat, optimizer, attack_id, t_net_id, s_net_id, attack, trainloader, criterion_CE, temperature, attack_size, t_net, s_net, ratio, attack_ratio, epoch)
 
-        test(use_cuda, compress, attack_id, temperature, attack_size, t_net_id, s_net_id, testloader, criterion_CE, save_dir, s_net, epoch, save=True)
+        test(use_cuda, heat, attack_id, temperature, attack_size, t_net_id, s_net_id, testloader, criterion_CE, save_dir, s_net, epoch, save=True)
 
     state = {
         'net': s_net,
@@ -272,7 +282,7 @@ if __name__ == '__main__':
     parser.add_argument("--attack_id", type=str, default='BSS')
     parser.add_argument("--attack_size", type=int, default=64)
     parser.add_argument("--max_epoch", type=int, default=10)
-    parser.add_argument("--compress", type=int, default=0)
+    parser.add_argument("--heat", type=int, default=0)
     FLAGS = parser.parse_args()
     np.random.seed(9)
     main(FLAGS)
